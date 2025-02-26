@@ -4,7 +4,7 @@ buildscript {
     }
     dependencies {
         //noinspection GradleDependency
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4'
+//        classpath 'com.github.bintray:gradle-bintray-plugin:1.8.5'
         //noinspection GradleDependency
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
     }
@@ -12,7 +12,7 @@ buildscript {
 
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: "com.jfrog.bintray"
+//apply plugin: "com.jfrog.bintray"
 
 android {
     compileSdkVersion 28
@@ -35,8 +35,8 @@ android {
 }
 
 ext {
-    bintrayRepo = 'AnimatedRecyclerView'
-    bintrayName = 'AnimatedRecyclerView'
+//    bintrayRepo = 'AnimatedRecyclerView'
+//    bintrayName = 'AnimatedRecyclerView'
 
     publishedGroupId = 'com.mlsdev.animatedrv'
     libraryName = 'library'
@@ -72,5 +72,5 @@ repositories {
 
 if (project.rootProject.file('local.properties').exists()) {
     apply from: 'https://raw.githubusercontent.com/wajahatkarim3/JCenter-Gradle-Scripts/master/install.gradle'
-    apply from: 'https://raw.githubusercontent.com/wajahatkarim3/JCenter-Gradle-Scripts/master/bintray.gradle'
+//    apply from: 'https://raw.githubusercontent.com/wajahatkarim3/JCenter-Gradle-Scripts/master/bintray.gradle'
 }
